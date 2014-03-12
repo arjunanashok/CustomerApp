@@ -28,7 +28,9 @@ module Helpers
   end
 
   def verify_message(webelement, expected_error_message)
-    webelement.text.should match(expected_error_message)
+    actual_text = webelement.text.strip.downcase
+
+    actual_text.should match(expected_error_message.downcase)
   end
 
   def select_from_list(webelement,select_text)

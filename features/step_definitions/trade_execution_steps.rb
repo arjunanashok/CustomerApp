@@ -1,13 +1,4 @@
-When(/^I navigate to "(.*?)" page$/) do |page|
 
-  case page
-    when "convert"
-      @customer_app.convert.load
-    else
-      raise "The given navigation #{page} page is not defined "
-  end
-  verify_tab(page)
-end
 When(/^I submit a quote$/) do
   @customer_app.convert.get_quote.click
 end

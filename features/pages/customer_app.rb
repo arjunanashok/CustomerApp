@@ -15,4 +15,12 @@ class CustomerApp
   def convert
     Convert_page.new
   end
+
+  def forget_password
+    ForgotPassword_page.new
+  end
+
+  def payment
+    Payment_Page.new
+  end
 end
