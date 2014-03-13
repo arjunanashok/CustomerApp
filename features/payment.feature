@@ -29,7 +29,3 @@ Feature: As a "TheCurrency Cloud" User I would  like to send my password details
     And I have selected "United States" beneficiary name
     When I submit the details in "payment" page
     Then am shown "Select Beneficiary Account" message in "payment" page
-
-
-
-
