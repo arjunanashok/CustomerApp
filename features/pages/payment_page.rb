@@ -5,6 +5,8 @@ class PaymentSection < SitePrism::Section
   element :amount, "#amount"
   element :amount_error_message, "span[data-bind='validationMessage: amount']"
   element :beneficiary_error_message, "span[data-bind='validationMessage: beneficiaryName']"
+  element :account_error_message, "span[data-bind='validationMessage: beneficiaryAccount']"
+  element :beneficiary_drop_down, "div#s2id_beneficiary_name_placeholder span.arrow.fui-triangle-down-small"
 
 end
 
@@ -19,6 +21,7 @@ class Payment_Page  < SitePrism::Page
   set_url "#{$base_url}/payments/new"
 
   section :form, PaymentSection, ".b-wizard__steps"
+
 
 
   section :drop_down_form, DropDownResult, "#select2-drop"

@@ -23,6 +23,12 @@ Feature: As a "TheCurrency Cloud" User I would  like to send my password details
     When I submit the details in "payment" page
     Then am shown "Select Beneficiary Name" message in "payment" page
 
+   Scenario: user confrims beneficiary account is mandatory
+    Given I have selected "USD" as payment currency
+    And I have entered "100.00" payment amount
+    And I have selected "United States" beneficiary name
+    When I submit the details in "payment" page
+    Then am shown "Select Beneficiary Account" message in "payment" page
 
 
 

@@ -53,6 +53,8 @@ Then(/^am shown "(.*?)" message in "(.*?)" page$/) do |expected_error_message, p
       verify_error_message(@customer_app.payment.form.currency_error_message, expected_error_message)
     when "Select Beneficiary Name"
       verify_error_message(@customer_app.payment.form.beneficiary_error_message,expected_error_message)
+    when "Select Beneficiary Account"
+      verify_error_message(@customer_app.payment.form.account_error_message,expected_error_message)
     else
       raise  "Undefinied error message : #{expected_error_message}"
   end

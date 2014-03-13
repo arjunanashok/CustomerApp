@@ -8,5 +8,11 @@ And(/^I have selected "(.*?)" as payment currency$/) do |arg1|
 
   @customer_app.payment.drop_down_form.type_text.set arg1
   @customer_app.payment.drop_down_form.type_result.click
-  sleep(5.to_i)
+
+end
+
+And(/^I have selected "(.*?)" beneficiary name$/) do |beneficiary_name|
+  @customer_app.payment.form.beneficiary_drop_down.click
+  @customer_app.payment.drop_down_form.type_text.set beneficiary_name
+  @customer_app.payment.drop_down_form.type_result.click
 end
