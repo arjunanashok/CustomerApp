@@ -60,10 +60,8 @@ Then(/^the trade is booked successfully$/) do
   @customer_app.convert.confirmation.brought_currency.text.should == @buy_currency
 
   if @side.downcase == 'buy'
-    #puts "the Buy amount is #{@customer_app.convert.confirmation.brought_amount.text}"
     @customer_app.convert.confirmation.brought_amount.text.to_i == @trade_amount
   else
-    #puts "the Sell amount is #{@customer_app.convert.confirmation.sold_amount.text}"
     @customer_app.convert.confirmation.sold_amount.text.to_i == @trade_amount
   end
 end

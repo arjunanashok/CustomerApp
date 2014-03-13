@@ -10,7 +10,6 @@ When(/^I navigate to "(.*?)" page$/) do |page|
     else
       raise "The given navigation #{page} page is not defined "
   end
-  #verify_tab(page)
 end
 
 Then(/^am in "(.*?)" page$/) do |page|
