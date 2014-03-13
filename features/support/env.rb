@@ -27,7 +27,7 @@ $base_url ="http://customer.test.ccycloud.com"
 
 
 After do |scenario|
-  sleep(2.to_i)
+  #sleep(2.to_i)
   if scenario.failed?
     current_path = File.expand_path File.dirname(__FILE__)
     screenshot = "#{current_path}#{scenario.name.gsub(' ','_').gsub(/[^0-9A-Za-z_]/, '')}.png"
